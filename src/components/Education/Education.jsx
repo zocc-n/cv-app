@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
-function Education({setEducationData}) {
+function Education({setEducationData, toggleEducation}) {
 
     const [data, setData] = useState({
         degree: "",
@@ -11,6 +12,8 @@ function Education({setEducationData}) {
         endDate: "",
     })
 
+    const [toggle, setToggle] = useState(false)
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setEducationData(data);
@@ -19,6 +22,19 @@ function Education({setEducationData}) {
 
     return (
         <>
+            <div className='title'>
+                <p>Education</p>
+                <div className="symbol" onClick={() => setToggle(!toggle)}>
+                    {toggle
+                        ? <FaChevronUp />
+                        : <FaChevronDown />
+                    }             
+                </div>  
+            </div>
+
+            {
+            toggle ?
+
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
 
@@ -76,6 +92,9 @@ function Education({setEducationData}) {
                     <button>Save</button>
                 </form>
             </div>
+            
+            : null    
+            }           
         </>
     )
 }

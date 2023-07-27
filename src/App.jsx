@@ -26,12 +26,12 @@ function App() {
 
   return (
     <div className='root-container'>
-      <button className="test" onClick={TESTSTATEDATA}>TEST</button>
+      {/* <button className="test" onClick={TESTSTATEDATA}>TEST</button> */}
       <Sidebar />
       <div className='forms-container'>
-        <General setGeneralData={setGeneralData}/>
-        <Education setEducationData={setEducationlData}/>
-        <Experience setExperienceData={setExperienceData}/>
+        <General setGeneralData={setGeneralData} toggleGeneral={toggle.general} />
+        <Education setEducationData={setEducationlData} toggleEducation={toggle.education} />
+        <Experience setExperienceData={setExperienceData} toggleExperience={toggle.experience} />
       </div>
       {/* <Preview /> */}
     </div>
@@ -39,7 +39,3 @@ function App() {
 }
 
 export default App
-
-
-// FaChevronDown
-// FaChevronUp

@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
-function Experience({setExperienceData}) {
+function Experience({setExperienceData, toggleExperience}) {
 
     const [data, setData] = useState({
         jobTitle: "",
@@ -10,6 +11,8 @@ function Experience({setExperienceData}) {
         description: "",
     })
 
+    const [toggle, setToggle] = useState(false)
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setExperienceData(data);
@@ -17,6 +20,19 @@ function Experience({setExperienceData}) {
 
     return (
         <>
+            <div className='title'>
+                <p>Professional Experience</p>
+                <div className="symbol" onClick={() => setToggle(!toggle)}>
+                    {toggle
+                        ? <FaChevronUp />
+                        : <FaChevronDown />
+                    }             
+                </div>  
+            </div>
+
+            {
+            toggle ?
+
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="jobTitle">Job Title</label>
@@ -61,7 +77,10 @@ function Experience({setExperienceData}) {
 
                     <button>Save</button>
                 </form>
-            </div>          
+            </div>
+        
+        :null    
+        }          
         </>
     );
 }

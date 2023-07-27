@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
-function General({ setGeneralData }) {
+function General({ setGeneralData, toggleGeneral }) {
 
     const [data, setData] = useState({
         fullName: "",
@@ -11,13 +12,30 @@ function General({ setGeneralData }) {
         country: "",
     })
 
+    const [toggle, setToggle] = useState(false)
+
     const handleSubmit = (e) => {
         e.preventDefault()
         setGeneralData(data)
     }
 
+    // () => setToggle(prev => !prev)
+
     return (
         <>
+            <div className='title'>
+                <p>General Infomration</p>
+                <div className="symbol" onClick={() => setToggle(!toggle)}>
+                    {toggle
+                        ? <FaChevronUp />
+                        : <FaChevronDown />
+                    }             
+                </div>  
+            </div>
+            
+            {
+            toggle ?
+            
             <div className="form-container">
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="full-name">Full Name</label>
@@ -69,7 +87,10 @@ function General({ setGeneralData }) {
                     />
                     <button>Save</button>
                 </form>
-            </div>          
+            </div> 
+            
+            : null
+            }        
         </>
     );
 }
