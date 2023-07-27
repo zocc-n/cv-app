@@ -12,8 +12,8 @@ function General({ setGeneralData }) {
     })
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        setGeneralData(data);
+        e.preventDefault()
+        setGeneralData(data)
     }
 
     return (

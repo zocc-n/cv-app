@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function Education() {
+function Education({setEducationData}) {
 
     const [data, setData] = useState({
         degree: "",
@@ -80,4 +80,4 @@ function Education() {
     )
 }
 
-export default Education
+export default Education;

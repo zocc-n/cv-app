@@ -3,6 +3,7 @@ import './App.css'
 import Sidebar from './components/Sidebar/Sidebar.jsx'
 import General from './components/General/General.jsx'
 import Education from './components/Education/Education.jsx'
+import Experience from './components/Experience/Experience.jsx'
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
 
     const TESTSTATEDATA = () => {
       console.log(generalData)
+      console.log(educationData)
+      console.log(experienceData)
     }
 
   return (
@@ -28,7 +31,7 @@ function App() {
       <div className='forms-container'>
         <General setGeneralData={setGeneralData}/>
         <Education setEducationData={setEducationlData}/>
-        {/* <Experience /> */}
+        <Experience setExperienceData={setExperienceData}/>
       </div>
       {/* <Preview /> */}
     </div>
