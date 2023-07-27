@@ -11,13 +11,6 @@ function App() {
   const [educationData, setEducationlData] = useState(null)
   const [experienceData, setExperienceData] = useState(null)
 
-  const [toggle, setToggle] = useState(
-    {
-      general: false, 
-      education: false,
-      experience: false
-    })
-
     const TESTSTATEDATA = () => {
       console.log(generalData)
       console.log(educationData)
@@ -29,9 +22,9 @@ function App() {
       {/* <button className="test" onClick={TESTSTATEDATA}>TEST</button> */}
       <Sidebar />
       <div className='forms-container'>
-        <General setGeneralData={setGeneralData} toggleGeneral={toggle.general} />
-        <Education setEducationData={setEducationlData} toggleEducation={toggle.education} />
-        <Experience setExperienceData={setExperienceData} toggleExperience={toggle.experience} />
+        <General setGeneralData={setGeneralData} />
+        <Education setEducationData={setEducationlData} />
+        <Experience setExperienceData={setExperienceData} />
       </div>
       {/* <Preview /> */}
     </div>

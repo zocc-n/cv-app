@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
-function Education({setEducationData, toggleEducation}) {
+function Education({ setEducationData }) {
 
     const [data, setData] = useState({
         degree: "",

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
-function Experience({setExperienceData, toggleExperience}) {
+function Experience({ setExperienceData }) {
 
     const [data, setData] = useState({
         jobTitle: "",
