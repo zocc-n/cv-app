@@ -1,0 +1,23 @@
+body {
+    background-color: burlywood;
+}
+
+.root-container {
+    background-color: brown;
+    display: flex;
+}
+
+.forms-container {
+    background-color: antiquewhite;
+    width: min-content;
+    height: min-content;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid green;
+}
+
+.form-container {
+    border: 2px solid lime;
+    margin: 15px;
+}

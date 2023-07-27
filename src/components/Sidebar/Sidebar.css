@@ -1,0 +1,28 @@
+.sidebar {
+    /* border: 1px solid red; */
+    background-color: cadetblue;
+    margin: 30px;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 3rem;
+    padding-bottom: 50px;
+}
+
+.download-btn {
+    background-color: red;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background-color: rgb(253, 62, 62);
+}
+
+.download-btn:active {
+    background-color: pink;
+}
