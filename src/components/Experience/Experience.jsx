@@ -22,7 +22,7 @@ function Experience({ setExperienceData }) {
         <>
             <div className='title'>
                 <p>Professional Experience</p>
-                <div className="symbol" onClick={() => setToggle(!toggle)}>
+                <div className="symbol" onClick={() => setToggle(prev => !prev)}>
                     {toggle
                         ? <FaChevronUp />
                         : <FaChevronDown />

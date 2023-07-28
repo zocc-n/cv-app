@@ -24,7 +24,7 @@ function Education({ setEducationData }) {
         <>
             <div className='title'>
                 <p>Education</p>
-                <div className="symbol" onClick={() => setToggle(!toggle)}>
+                <div className="symbol" onClick={() => setToggle(prev => !prev)}>
                     {toggle
                         ? <FaChevronUp />
                         : <FaChevronDown />

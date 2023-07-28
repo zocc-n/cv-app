@@ -15,11 +15,22 @@ body {
     display: flex;
     flex-direction: column;
     border: 3px solid green;
+    flex:2;
 }
 
 .form-container {
     /* border: 2px solid lime; */
     margin: 15px;
+}
+
+.form-container > form {
+    border: 1px solid forestgreen;
+    display: flex;
+    flex-direction: column;
+}
+
+form > input {
+    margin-bottom: 10px;
 }
 
 .title {
@@ -34,4 +45,11 @@ body {
 
 .symbol {
     border: 1px solid red;
+}
+
+.preview-container {
+    background-color: antiquewhite;
+    margin: 30px;
+    height: 800px;
+    flex: 3;
 }

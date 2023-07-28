@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa'
 
-function General({ setGeneralData, toggleGeneral }) {
+function General({ setGeneralData }) {
 
     const [data, setData] = useState({
         fullName: "",
@@ -19,13 +19,11 @@ function General({ setGeneralData, toggleGeneral }) {
         setGeneralData(data)
     }
 
-    // () => setToggle(prev => !prev)
-
     return (
         <>
             <div className='title'>
                 <p>General Infomration</p>
-                <div className="symbol" onClick={() => setToggle(!toggle)}>
+                <div className="symbol" onClick={() => setToggle(prev => !prev)}>
                     {toggle
                         ? <FaChevronUp />
                         : <FaChevronDown />
